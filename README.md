@@ -1,1 +1,1 @@
-Hello there!
+The is study project about concurrency.
