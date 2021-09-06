@@ -15,7 +15,6 @@ public class PierLoader implements Runnable {
             while (true) {
 
                 Thread.currentThread().setName("Loader "+shipType);
-                //Thread.sleep(500);
                 Ship ship = tunnel.get(shipType);
                 if(ship!=null)
                     while (ship.countCheck()){
@@ -26,10 +25,7 @@ public class PierLoader implements Runnable {
 
             }
         } catch (InterruptedException e) {
-            //e.printStackTrace();
-            System.out.println("Thread is interapted");
-            //{return;
-
+            e.printStackTrace();
         }
     }
 }

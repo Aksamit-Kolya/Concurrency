@@ -1,1 +1,1 @@
-The is study project about concurrency.
+This is study project about concurrency.

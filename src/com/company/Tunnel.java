@@ -46,8 +46,7 @@ public class Tunnel {
                 }
             }
         } catch (InterruptedException e) {
-            //e.printStackTrace();
-            return null;
+            e.printStackTrace();
         }
         return null;
     }
