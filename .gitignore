@@ -1,3 +1,5 @@
 .idea/
 Concurrency_2.iml
-pom.xml
+target/
+${project.build.directory}/
+out/

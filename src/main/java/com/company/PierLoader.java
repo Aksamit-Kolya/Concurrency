@@ -1,12 +1,13 @@
 package com.company;
 
+
 public class PierLoader implements Runnable {
     private Tunnel tunnel;
     private Ship.Type shipType;
 
     public PierLoader(Tunnel tunnel, Ship.Type shipType) {
         this.tunnel = tunnel;
-        this.shipType =shipType;
+        this.shipType = shipType;
     }
 
     @Override
@@ -14,10 +15,10 @@ public class PierLoader implements Runnable {
         try {
             while (true) {
 
-                Thread.currentThread().setName("Loader "+shipType);
+                Thread.currentThread().setName("Loader " + shipType);
                 Ship ship = tunnel.get(shipType);
-                if(ship!=null)
-                    while (ship.countCheck()){
+                if (ship != null)
+                    while (ship.countCheck()) {
                         Thread.sleep(100);
                         ship.add(10);
                         System.out.println(ship.getCount() + " Loaded ship. " + Thread.currentThread().getName());

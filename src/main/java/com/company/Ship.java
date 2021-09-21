@@ -1,11 +1,12 @@
 package com.company;
 
 
-
 public class Ship {
 
-    enum Size{
-        SIZE_10(10), SIZE_50(50), SIZE_100(100);
+    enum Size {
+        SIZE_10(10),
+        SIZE_50(50),
+        SIZE_100(100);
 
         private int value;
 
@@ -13,11 +14,16 @@ public class Ship {
             this.value = value;
         }
 
-        public int getValue(){
+        public int getValue() {
             return value;
         }
     }
-    enum Type{BREAD, BANANAS, CLOTHES}
+
+    enum Type {
+        BREAD,
+        BANANAS,
+        CLOTHES
+    }
 
     private int count;
     private Size size;
@@ -33,10 +39,7 @@ public class Ship {
     }
 
     public boolean countCheck() {
-        if (count >= size.getValue()) {
-            return false;
-        }
-        return true;
+        return count < size.getValue();
     }
 
     public int getCount() {

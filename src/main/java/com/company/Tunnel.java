@@ -3,6 +3,7 @@ package com.company;
 import java.util.ArrayList;
 import java.util.List;
 
+
 public class Tunnel {
 
     private List<Ship> store;
@@ -17,7 +18,9 @@ public class Tunnel {
     public synchronized boolean add(Ship element) {
 
         try {
-            while (shipsCounter == maxShipsInTunnel) {wait();}
+            while (shipsCounter == maxShipsInTunnel) {
+                wait();
+            }
                 store.add(element);
                 String info = String.format("%s + The ship arrived in the tunnel: %s %s %s", store.size(), element.getType(), element.getSize(), Thread.currentThread().getName());
                 System.out.println(info);

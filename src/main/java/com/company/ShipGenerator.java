@@ -2,6 +2,7 @@ package com.company;
 
 import java.util.Random;
 
+
 public class ShipGenerator implements Runnable {
 
     private Tunnel tunnel;
